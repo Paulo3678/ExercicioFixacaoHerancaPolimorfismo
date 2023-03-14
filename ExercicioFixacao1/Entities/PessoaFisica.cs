@@ -17,22 +17,14 @@ namespace ExercicioFixacao1.Entities
 
         public override double CalcularImposto()
         {
-            double imposto = 0.0;
-
             if (RendaAnual < 20000.00)
             {
-                imposto = 0.15 * RendaAnual;
+                return 0.15 * RendaAnual - GastosComSaude * 0.50;
             }
             else
             {
-                imposto = 0.25 * RendaAnual;
+                return 0.25 * RendaAnual - GastosComSaude * 0.50;
             }
-
-            if(GastosComSaude > 0)
-            {
-                imposto -= GastosComSaude * 0.50;
-            }
-            return imposto;
         }
     }
 }

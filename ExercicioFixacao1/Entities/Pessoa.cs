@@ -2,7 +2,7 @@
 
 namespace ExercicioFixacao1.Entities
 {
-    class Pessoa
+    abstract class Pessoa
     {
         public string Nome { get; set; }
         protected double RendaAnual { get; set; }
@@ -17,9 +17,7 @@ namespace ExercicioFixacao1.Entities
             RendaAnual = rendaAnual;
         }
 
-        public virtual double CalcularImposto() {
-            return RendaAnual;
-        }
+        public abstract double CalcularImposto();
 
 
 

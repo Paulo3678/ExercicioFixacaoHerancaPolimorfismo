@@ -17,19 +17,15 @@ namespace ExercicioFixacao1.Entities
 
         public override double CalcularImposto()
         {
-            double imposto = 0.0;
-
-            if(NumeroFuncionarios > 10)
+            if (NumeroFuncionarios > 10)
             {
-                imposto = RendaAnual * 0.14;
+                return RendaAnual * 0.14;
             }
             else
             {
-                imposto = RendaAnual * 0.16;
+                return RendaAnual * 0.16;
             }
 
-
-            return imposto;
         }
 
     }
